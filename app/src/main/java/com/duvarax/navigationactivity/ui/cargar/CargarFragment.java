@@ -29,8 +29,6 @@ public class CargarFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentCargarBinding.inflate(inflater, container, false);
         mv = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(CargarViewModel.class);
-        fm = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(ListarViewModel.class);
-
         mv.getNuevaNota().observe(getActivity(), new Observer<String>() {
             @Override
             public void onChanged(String nota) {
